@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="logo">NURRUL SYAIDATUL NAJWA</div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <i class="fas" [ngClass]="menuOpen ? 'fa-times' : 'fa-bars'"></i>
+  </div>
+
+  <!-- Menu -->
+  <ul [class.active]="menuOpen">
+    <li><a href="#about" (click)="toggleMenu()">ABOUT</a></li>
+    <li><a href="#experience" (click)="toggleMenu()">EXPERIENCE</a></li>
+    <li><a href="#education" (click)="toggleMenu()">EDUCATION</a></li>
+    <li><a href="#skills" (click)="toggleMenu()">SKILLS</a></li>
+    <li><a href="#projects" (click)="toggleMenu()">PROJECTS</a></li>
+  </ul>
+</nav>

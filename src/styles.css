@@ -4,48 +4,9 @@
   box-sizing: border-box;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: #fff;
-  border-bottom: 2px solid #a30000;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-weight: bold;
-  color: #800000;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #800000;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-.navbar ul li a.active {
-  background: #f00; /* highlight active link */
-  color: #fff;
-}
-
-
 /* About Section */
 .about-section {
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-bottom: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -119,12 +80,13 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  width: 900px;
-  margin-top: none;
+  max-width: 100%;   
+  width: auto;       
+  margin-top: 0;
   margin-bottom: 3rem;
   margin-left: auto;
-  margin-right: auto ; 
-  
+  margin-right: auto; 
+  flex-wrap: wrap;   
 }
 
 .social-box a {
@@ -135,8 +97,20 @@
 }
 
 .social-box a:hover {
-  color: #ff6d6d;
+  color: white;
   transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 100px) {
+  .social-box {
+    gap: 20px;        /* smaller gaps on mobile */
+    padding: 10px; 
+  }
+
+  .social-box a {
+    font-size: 22px;  /* smaller icons for mobile */
+  }
 }
 
 
